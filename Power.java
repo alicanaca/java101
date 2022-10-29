@@ -1,18 +1,28 @@
 import java.util.Scanner;
 
 public class Power {
+
+    public static int UsAlma(int taban,int us)
+    {   
+        if(taban==1||us==0)
+            return 1;
+        else
+        {
+         return UsAlma(taban,us-1)*taban;
+        }
+    }
+
     public static void main(String[] args) {
-        double taban, us, res;
+        int taban, us;
         Scanner sc = new Scanner(System.in);
 
         System.out.print("Taban sayısını giriniz: ");
-        taban = sc.nextDouble();
+        taban = sc.nextInt();
 
         System.out.print("Üs değerini giriniz: ");
-        us = sc.nextDouble();
+        us = sc.nextInt();
         sc.close();
 
-        res = Math.pow(taban, us);
-        System.out.printf("Sonuç: %.0f", res);        
+        System.out.printf("Sonuç: %d", UsAlma(taban, us));        
     }
 }
