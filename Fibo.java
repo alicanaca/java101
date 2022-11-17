@@ -2,7 +2,6 @@ import java.util.Scanner;
 
 public class Fibo {
     public static void main(String[] args) {
-
         int sayi, top=0, pre=0, next=1;
         Scanner sc = new Scanner(System.in);
 
